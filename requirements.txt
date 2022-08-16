@@ -36,3 +36,4 @@ ua-parser==0.15.0
 urllib3==1.26.11
 user-agents==2.2.0
 Werkzeug==2.2.2
+clipboard
