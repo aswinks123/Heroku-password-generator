@@ -87,7 +87,7 @@ def main():
         for i in range(1, 3):
             set_processbar('bar', i / 2)
             time.sleep(0.2)
-
+        put_text("")
 
 
 
@@ -103,18 +103,23 @@ def main():
                        ]
 
                       )
-            elif btn_val=='Copy to Clipboard':
+            elif btn_val=='Copy':
                 #pyperclip.copy(password)   #To copy password to clipboard
 
                 toast('This feature is in testing stage!', duration=3, position='center', color='success', onclick=None)
 
         put_table([
 
-            ['Password', password,put_buttons(['Copy to Clipboard','Home','About'],onclick=btn_click)],
+            ['Password', password,
+             ],
 
             ])
+        put_text("")
+        put_buttons(['Copy', 'Home', 'About'], onclick=btn_click)
+        put_text("")
         img = open('git.png', 'rb').read()  # logo
         put_image(img, width='60px')  # size of image
+        put_text("")
         put_text("More @https://github.com/aswinks1995")
 
 
