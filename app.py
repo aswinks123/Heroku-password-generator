@@ -1,13 +1,13 @@
 #Created by : Aswin KS
 import argparse
 import random
-import pyperclip
+#import pyperclip
 from flask import Flask
 from pywebio import *
 from pywebio.output import *
 from pywebio.input import *
 import  time
-
+import clipboard
 from pywebio.platform.flask import webio_view
 from pywebio.session import run_js, set_env
 
@@ -106,7 +106,8 @@ def main():
 
                       )
             elif btn_val=='Copy to Clipboard':
-                pyperclip.copy(password)   #To copy password to clipboard
+                #pyperclip.copy(password)   #To copy password to clipboard
+                clipboard.copy(password)
                 toast('Password Copied to clipboard', duration=3, position='center', color='success', onclick=None)
 
         put_table([
